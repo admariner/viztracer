@@ -66,6 +66,7 @@ jobs:
           CIBW_ARCHS: ${{matrix.arch}}
           CIBW_MANYLINUX_*_IMAGE: ${{ matrix.manylinux-image }}
           CIBW_MANYLINUX_I686_IMAGE: ${{ matrix.manylinux-image }}
+          CIBW_REPAIR_WHEEL_COMMAND: ""
 
       - name: Publish wheels to PyPI Unix
         if: matrix.os != 'windows-latest' 
